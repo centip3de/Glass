@@ -1,0 +1,27 @@
+0xF 0xF0 2								0xC2 Moving 2 into Register 0 (Setting up the write interrupt) 0xC2
+0xF 0xF1 0xC3 stdout 0xC3 				0xC2 Moving the string, "stdout" into Register 1 (Writing to standard ouput) 0xC2
+0xF 0xF2 0xC3 Insert a number: 0xC3		0xC2 Moving the string, "Insert a number: " into Register 2 (What to write) 0xC2
+0x13									0xC2 Calling an interrupt to be run 0xC2
+
+0xF 0xF0 3								0xC2 Moving 3 into Register 0 (Setting up the read interrupt) 0xC2
+0xF 0xF1 0xC3 stdin 0xC3				0xC2 Moving the string, "stdin" into Register 1 (Reading from standard input) 0xC2
+0xF 0xF2 1 								0xC2 Moving 1 into Register 2 (Register 2 must not be 0 for reading interrupts) 0xC2
+0x13									0xC2 Calling an interrupt to be run 0xC2
+
+0x2 0xF4 10								0xC2 Adding 10 to whatever Register 4 contains 0xC2
+0x1 0xF9 0xF0							0xC2 Moving the sum from our addition (stored in Register 0) into Register 9  0xC2
+
+0xF 0xF0 2								0xC2 Moving 2 into Register 0 (Setting up the write interrupt) 0xC2
+0xF 0xF1 0xC3 stdout 0xC3				0xC2 Moving the string, "stdout" into Register 1 (Writing to standard output) 0xC2
+0xF 0xF2 0xC3 And the answer is: 0xC3	0xC2 Moving the string, "And the anser is: " into Register 2 (What to print) 0xC2
+0x13									0xC2 Calling an interrupt to be run 0xC2
+
+0xF 0xF0 2								0xC2 Moving 2 into Register 0 (Setting up the write interrupt) 0xC2
+0xF 0xF1 0xC3 stdout 0xC3 				0xC2 Moving the string, "stdout" into Register 1 (Writing to standard output) 0xC2
+0xF 0xF2 0xF9							0xC2 Moving what Register 9 contained (Our sum) to Register 2 (What to print) 0xC2
+0x13 									0xC2 Calling an interrupt to be run 0xC2
+
+0xF 0xF0 2 								0xC2 Moving 2 into Register 0 (Setting up the write interrupt) 0xC2
+0xF 0xF1 0xC3 stdout 0xC3 				0xC2 Moving the string, "stdout" into Register 1 (Writing to standard output) 0xC2
+0xF 0xF2 0xC0							0xC2 Moving the newline symbol into Register 2 (What to print) 0xC2
+0x13 									0xC2 Calling an interrupt to be run 0xC2

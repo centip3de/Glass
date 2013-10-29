@@ -1,0 +1,14 @@
+0xF 0xF0 3						      0xC2 Moving 3 into Register 0 (Setting up the read interrupt) 0xC2
+0xF 0xF1 0xC3 stdin 0xC3		0xC2 Moving the string, "stdin" into Register 1 (Reading from standard input) 0xC2
+0xF 0xF2 1						      0xC2 Moving 1 into Register 2 (Register 2 cannot be 0, or null. It must contain data) 0xC2
+0x13							          0xC2 Calling an interrupt to be run 0xC2
+
+0xF 0xF0 2						      0xC2 Moving 2 into Register 0 (Setting up the write interrupt) 0xC2
+0xF 0xF1 0xC3 stdout 0xC3		0xC2 Moving the string, "stdout" into Register 1 (Writing to standard output) 0xC2
+0xF 0xF2 0xF4				      	0xC2 Moving what's in Register 4 into Register 2 (What we just read in above) 0xC2
+0x13							          0xC2 Calling an interrupt to be run 0xC2
+
+0xF 0xF0 2						      0xC2 Moving 2 into Register 0 (Setting up the read interrupt) 0xC2
+0xF 0xF1 0xC3 stdout 0xC3		0xC2 Moving the string, "stdout" into Register 3 (Writing to standard output) 0xC2
+0xF 0xF2 0xC0					      0xC2 Moving a new line symbol into Register 2 (Printing out a new line, for looks) 0xC2
+0x13							          0xC2 Calling an interrupt to be run 0xC2

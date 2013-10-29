@@ -1,0 +1,8 @@
+0x21 INFINITE_LOOP				0xC2 Defining a label with the name "INFINITE_LOOP" 0xC2
+
+0xF 0xF0 2					0xC2 Moving 2 into register 0 (prepping a write interrupt) 0xC2		
+0xF 0xF1 0xC3 stdout 0xC3			0xC2 Moving 'stdout' into register 1 (where to write to) 0xC2
+0xF 0xF2 0xC3 Repeating this a lot! 0xC3 	0xC2 Moving the message "Repeating this a lot!" into register 2 (what to write) 0xC2
+0x13						0xC2 Calling our interrupt 0xC2
+
+0x19 INFINITE_LOOP 				0xC2 Jumping to the label, "INFINITE_LOOP" that we just defined at the top 0xC2

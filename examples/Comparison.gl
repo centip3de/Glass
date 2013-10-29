@@ -1,0 +1,14 @@
+0xC 0xC3 Test! 0xC3 0xC3 Testing! 0xC3 		0xC2 Comparing the two strings, "Test!" and "Testing!", which should evaluate to false 0xC2
+0x14						0xC2 If it does, then Flag A should be 0 (or 1 if it evaluates to true)	0xC2
+
+0xC 0xC3 Moar test 0xC3 0xC3 Moar test 0xC3  	0xC2 Comparing the two strings, "Moar test" and "Moar test", which should evaluate to true 0xC2
+0x14						0xC2 If it does, then Flag A should be 1 (or 0 if it evaluates to false) 0xC2
+
+0xC 4 8						0xC2 Comparing the two numbers, 4 and 8, which should evaluate to false 0xC2
+0x14						0xC2 If it does, then Flag A should be 0 (or 1 if it evaluates to true) 0xC2
+
+0xF 0xF0 4					0xC2 Moving 4 into register 0 0xC2
+0xC 0xF0 4					0xC2 Comparing the contents of register 0 (4) to the number 4, which should be true 0xC2
+0x14						0xC2 If it does, then Flag A should be 1 (or 0 if it evaluates to false) 0xC2
+
+
